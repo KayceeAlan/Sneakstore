@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'Double Feature', sans-serif;
+    src: url("./font/DoubleFeature20.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+.main-header {
+    background-color: green;
+    background-image: url("./img/bg.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+    font-family: Poppins, sans-serif;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 6em;
+    font-family: 'Double Feature', sans-serif;
+    font-weight: normal;
+    letter-spacing: 5px;
+    color: white;
+    cursor: pointer;
+    transition:0.4s ease-in-out;
+}
+
+.band-name:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.band-name-footer{
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-family: 'Double Feature', sans-serif;
+    cursor: pointer;
+}
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2.5em;
+}
+.section-header {
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.main-footer {
+    background-color: green;
+    background-image: url("./img/bg.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 20px;
+    height: 20px;
+}
+
+.btn {
+    background-color: var(--background-color);
+    color: white;
+    padding: .5em 1em;
+    border: none;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+    --background-color: black;
+    --border-size: 2px;
+    --accent-color: green;
+    font-family: Poppins, sans-serif;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid green;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--accent-color);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.btn-primary:hover::before, .btn-primary:focus::before {
+    transform: scaleX(1);
+}
+
+.btn-primary{
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+    color: white;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    font-family: Roboto, sans-serif;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 300px;
+    transition:0.4s ease-in-out;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    font-family: Hindi, sans-serif;
+    flex-grow: 1;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    font-family: Roboto, sans-serif;
+    color: black;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: black;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: black;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid green;
+    background-color: #eee;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: black;
+    font-size: 1.5em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.visible-xs{
+    color: green;
+}
+
+.shop-item-image:hover{
+    transform: scale(1.6);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px){
+    .band-name {
+        text-align: center;
+        margin: 0;
+        font-size: 2.5em;
+    }
+    .main-footer-container ul{
+        display: none;
+    }
+}
